@@ -1,0 +1,4 @@
+ALGORITMO: Dijkstra
+JUSTIFICATIVA: Todos os pesos das arestas sao nao-negativos, portanto Dijkstra é aplicavel e mais eficiente (O((V+E) log V)) do que Bellman-Ford para um unico par (S,T).
+ROTA: 0 1 3 4
+CUSTO: 7
