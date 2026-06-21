@@ -13,7 +13,12 @@ Glauber Leite
 
 ## **Como testar?**
 
-1 - Abra o terminal na raiz do projeto : 
+1 - Clone o repositório do projeto:
+```bash
+git clone https://github.com/martanascimento1/graph_theory_project.git
+```
+
+2 - Abra o terminal na raiz do projeto : 
 ```bash
 cd graph_theory_project
 ```
