@@ -20,16 +20,16 @@ cd graph_theory_project
 
 2 - Para gerar a saída do grafo P: 
 ```bash
-python3 parte1/main_part1.py grafo_rede_p.txt saida_parte1_p.txt
+python3 parte1/main_part1.py grafo_rede_p.txt parte1/saida_parte1_p.txt
 ```
 
 3 - Para gerar a saída do grafo M: 
 ```bash
-python3 parte1/main_part1.py parte1/grafo_rede_m.txt saida_parte1_m.txt
+python3 parte1/main_part1.py grafo_rede_m.txt parte1/saida_parte1_m.txt
 ```
 
-4 - As saídas .txt serão geradas na raíz do projeto, para verificá-las:
+4 - As saídas .txt serão geradas na pasta 'parte1' , para verificá-las:
 ```bash
-cat saida_parte1_p.txt
-cat saida_parte1_m.txt
+cat parte1/saida_parte1_p.txt
+cat parte1/saida_parte1_m.txt
 ```
