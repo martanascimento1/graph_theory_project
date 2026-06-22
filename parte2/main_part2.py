@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-from backtrack import numero_cromatico
+from backtracking import numero_cromatico
 from write_read_io import escrever_saida, ler_grafo
 
 
