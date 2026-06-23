@@ -17,6 +17,10 @@ def resolver_coloracao(caminho_entrada, caminho_saida):
 
     k, coloracao = numero_cromatico(lista_adjacencia)
     cores_usadas = len(set(coloracao))
+    if cores_usadas != k:
+        raise ValueError(
+            f"Inconsistencia interna: NUM_CORES={k}, mas a coloracao usa {cores_usadas} cores."
+        )
     escrever_saida(caminho_saida, algoritmo, justificativa, k, coloracao)
 
 
