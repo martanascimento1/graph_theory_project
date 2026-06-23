@@ -10,9 +10,8 @@ def resolver_coloracao(caminho_entrada, caminho_saida):
 
     algoritmo = "Backtracking"
     justificativa = (
-        """O problema pede o menor número de cores. O backtracking testa k em ordem crescente
-           até encontrar a menor coloração válida, garantindo que a solução seja ótima. Além disso, em compa-
-           ração com algoritmos como o DSsatur, o backtracking tem uma implementação mais simples e que funciona para a dimensão do projeto."""
+        """O problema pede o menor número de cores. O backtracking testa k em ordem crescente até encontrar a menor coloração válida, garantindo que a 
+           solução seja ótima. Além disso, em comparação com algoritmos como o DSsatur, o backtracking tem uma implementação mais simples e que funciona para a dimensão do projeto."""
     )
 
     k, coloracao = numero_cromatico(lista_adjacencia)
