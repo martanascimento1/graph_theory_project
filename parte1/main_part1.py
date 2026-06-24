@@ -35,7 +35,7 @@ def reconstruir_rota(predecessor, origem, destino):
 
     rota.reverse()
 
-    # Se o primeiro vertice da rota reconstruida nao for a origem, significa que o destino esta em um componente desconexo da origem.
+    # Se o primeiro vertice da rota reconstruida nao for a origem, significa que o destino esta em um componente desconexo da origem
     if rota[0] != origem:
         return None
 
@@ -44,7 +44,7 @@ def reconstruir_rota(predecessor, origem, destino):
 
 def resolver_roteamento(caminho_entrada, caminho_saida):
 
-    # Funcao principal: le o grafo, escolhe e executa o algoritmo mais adequado, reconstroi a rota e escreve o arquivo de saida.
+    # lê o grafo, escolhe e executa o algoritmo mais adequado, reconstroi a rota e escreve o arquivo de saida
     (num_vertices, num_arestas, origem, destino,
      lista_adjacencia, arestas) = ler_grafo(caminho_entrada)
 

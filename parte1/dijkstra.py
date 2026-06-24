@@ -35,7 +35,7 @@ def dijkstra(num_vertices, lista_adjacencia, origem, destino):
             continue
         visitados.add(u)
 
-        # Só é necessário o caminho ate T, então para assim que ele for definitivamente resolvido
+        # Só é necessário o caminho ate T
         if u == destino:
             break
 

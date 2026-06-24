@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Esse módulo é responsável por:
-  1) Ler o arquivo de entrada no formato definido:
+  1) Ler o arquivo de entrada no formato definido na atividade:
 
          <num_vertices>\t<num_arestas>
          <S>\t<T>
@@ -16,7 +16,6 @@ Esse módulo é responsável por:
 
 O separador de campos na entrada e TAB ('\t'), conforme especificado.
 
-caminho_arquivo : Caminho do arquivo .txt de entrada.
 
 Saída: 
 num_vertices : Quantidade de vertices do grafo (vertices numerados de 0 a num_vertices - 1).
@@ -32,13 +31,13 @@ def ler_grafo(caminho_arquivo):
     with open(caminho_arquivo, "r", encoding="utf-8") as f:
         linhas = [linha.rstrip("\n") for linha in f if linha.strip() != ""]
 
-    # Linha 0: numero de vertices e numero de arestas
+    # numero de vertices e numero de arestas
     num_vertices, num_arestas = (int(x) for x in linhas[0].split("\t"))
 
-    # Linha 1: vertice de origem (S) e vertice de destino (T)
+    # vertice de origem (S) e vertice de destino (T)
     origem, destino = (int(x) for x in linhas[1].split("\t"))
 
-    # Inicializa a lista de adjacencia para todos os vertices, mesmo os que nao possuem arestas de saida (evita KeyError mais adiante).
+    # inicializa a lista de adjacencia para todos os vertices, mesmo os que nao possuem arestas de saida
     lista_adjacencia = {v: [] for v in range(num_vertices)}
     arestas = []
 

@@ -46,7 +46,7 @@ def bellman_ford(num_vertices, arestas, origem, destino):
         if not houve_atualizacao:
             break
 
-    # Fase 2: deteccao de ciclo negativo
+    # deteccao de ciclo negativo
     ciclo_negativo = False
     for u, v, peso in arestas:
         if dist[u] != INFINITO and dist[u] + peso < dist[v]:
