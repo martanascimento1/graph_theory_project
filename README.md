@@ -100,12 +100,12 @@ O programa decide automaticamente qual algoritmo usar, verificando se existe alg
 | Grafo | Tem peso negativo? | Algoritmo escolhido | Por quê |
 |---|---|---|---|
 | `grafo_rede_p.txt` | Não | **Dijkstra** | Com todos os pesos ≥ 0, Dijkstra é o mais eficiente: O((V+E) log V) usando fila de prioridade, contra O(V·E) do Bellman-Ford. |
-| `grafo_rede_m.txt` | Sim | **Bellman-Ford** | Dijkstra falha na presença de pesos negativos, pois fixa a distância de um vértice ao removê-lo da fila. Uma aresta negativa descoberta depois poderia invalidar essa distância. Bellman-Ford relaxa todas as arestas em V-1 rodadas e ainda detecta ciclos negativos, garantindo corretude. |
+| `grafo_rede_m.txt` | Sim | **Bellman-Ford** | Dijkstra falha quando se tem pesos negativos, pois fixa a distância de um vértice ao removê-lo da fila. Uma aresta negativa descoberta depois poderia invalidar essa distância. Bellman-Ford relaxa todas as arestas em V-1 rodadas e ainda detecta ciclos negativos, garantindo corretude. |
 
 ### Parte 2 — Backtracking vs. Outros (Guloso/DSatur)
 
-Foi escolhido **backtracking exaustivo** (testando k = 1, 2, 3, ... até achar a menor coloração válida) em vez de algorítimos como Guloso ou DSatur.
+Foi escolhido **backtracking exaustivo** (testando k em ordem crescente até achar a menor coloração válida) em vez de algorítimos como Guloso ou DSatur.
 
 - **Vantagem:** garante o número cromático **exato** (χ(G)), e não apenas uma aproximação
-- **Custo:** backtracking é exponencial no pior caso, mas para o tamanho dos grafos desta atividade 5 e 8 vértices a execução é praticamente instantânea, então a garantia de otimalidade compensa a simplicidade da implementação frente ao DSatur.
+- **Custo:** backtracking é exponencial no pior caso, mas para grafos em que o tamanho não é muito grande, a execução é praticamente instantânea, então a garantia de otimalidade compensa a simplicidade da implementação em relação ao DSatur.
 - Para grafos muito maiores, DSatur seria mais adequado por escalar melhor, abrindo mão da garantia de exatidão.
